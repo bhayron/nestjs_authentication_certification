@@ -10,6 +10,7 @@ import { IamModule } from './iam/iam.module';
   imports: [
     CoffeesModule,
     UsersModule,
+    IamModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',
@@ -20,7 +21,6 @@ import { IamModule } from './iam/iam.module';
       autoLoadEntities: true,
       synchronize: true,
     }),
-    IamModule,
   ],
   controllers: [AppController],
   providers: [AppService],
